@@ -25,7 +25,11 @@
 			<classes dir="build/classes"/>
 		</war>
 	</target>
-	
+
+	<target name="deploy" depends="war">
+		<copy file="dist/AntExample.war" todir="/home/tom/apache-tomcat-8.5.37/webapps"  />
+	</target>	
+
 	<target name="clean">
 		<delete dir="dist" />
 		<delete dir="build" />
